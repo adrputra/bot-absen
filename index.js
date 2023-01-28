@@ -40,10 +40,10 @@ app.get('/', (req, res) => {
         '--disable-gpu'
       ],
     },
-    authStrategy: new LegacySessionAuth()
+    authStrategy: new LocalAuth({ clientId: "bot" })
   });
 
-client.on('message', message => {
+client.on('message', async message => {
     if(message.body === '!ping') {
 		message.reply('_[Bot is Online]_ \nType *!help* to view command list.');
 	}
@@ -55,13 +55,14 @@ client.on('message', message => {
         inputLokasi = message.body.split('#')[4]
         inputJam = message.body.split('#')[5]
 
-        isValid = validateInput(inputFungsi, inputLokasi, inputJam)
+        isValid = await validateInput(inputFungsi, inputLokasi, inputJam)
+        console.log(isValid);
 
         if (isValid == true){
-            doCheckIn = CheckIn(inputName, inputFungsi, inputVendor, inputLokasi, inputJam)
+            doCheckIn = await CheckIn(inputName, inputFungsi, inputVendor, inputLokasi, inputJam)
             client.sendMessage(message.from, doCheckIn)
         } else {
-            client.sendMessage(isValid)
+            client.sendMessage(message.from, isValid)
         }
     }
 })
@@ -71,9 +72,8 @@ client.initialize();
 // Socket IO
 io.on('connection', function(socket) {
     socket.emit('message', 'Connecting...');
-    
+  
     client.on('qr', (qr) => {
-      qrcode.generate(qr, { small: true });
       console.log('QR RECEIVED', qr);
       qrcode.toDataURL(qr, (err, url) => {
         socket.emit('qr', url);

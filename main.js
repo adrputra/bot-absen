@@ -21,8 +21,8 @@ async function CheckIn(name, fungsi, vendor, lokasi, jam){
     //     buttonSubmit = await driver.find_element_by_xpath("//div[3]/div/div[1]/div/span")
 
     //     resp = await driver.find_element_by_xpath("//div/div//div/div/div[contains(.,'Your response has been recorded')]").text
-
-        return "\nBerhasil CheckIn. Test Bot"
+    console.log("Berhasil");
+    return "\nBerhasil CheckIn. Test Bot"
  
 }
 

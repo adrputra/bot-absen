@@ -1,0 +1,13 @@
+2023/01/29-02:25:43.661 1a7c Reusing MANIFEST D:\ADR\Personal\ADR\Self-Project\bot-absen\.wwebjs_auth\session-bot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/29-02:25:43.662 1a7c Recovering log #23
+2023/01/29-02:25:43.841 1a7c Reusing old log D:\ADR\Personal\ADR\Self-Project\bot-absen\.wwebjs_auth\session-bot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000023.log 
+2023/01/29-02:26:07.834 2b10 Level-0 table #28: started
+2023/01/29-02:26:07.909 2b10 Level-0 table #28: 1235961 bytes OK
+2023/01/29-02:26:07.955 2b10 Delete type=0 #23
+2023/01/29-02:26:17.307 32d0 Compacting 1@1 + 1@2 files
+2023/01/29-02:26:17.617 32d0 Generated table #29@1: 41493 keys, 2248323 bytes
+2023/01/29-02:26:17.655 32d0 Generated table #30@1: 2267 keys, 38524 bytes
+2023/01/29-02:26:17.656 32d0 Compacted 1@1 + 1@2 files => 2286847 bytes
+2023/01/29-02:26:17.672 32d0 compacted to: files[ 0 0 2 0 0 0 0 ]
+2023/01/29-02:26:17.672 32d0 Delete type=2 #25
+2023/01/29-02:26:17.673 32d0 Delete type=2 #28
